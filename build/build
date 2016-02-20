@@ -16,5 +16,5 @@ cd /hadoop/src
 sed -i 's/        <version>6.1.26.hwx<\/version>/        <version>6.1.26<\/version>/' ./hadoop-project/pom.xml
 sed -i 's/    <zookeeper.version>3.4.6.2.3.4.0-3485<\/zookeeper.version>/    <zookeeper.version>3.4.6<\/zookeeper.version>/' ./hadoop-project/pom.xml
 
-exec mvn -DskipTests install
+exec mvn package -Pdist -DskipTests -Dtar
 exit 0
