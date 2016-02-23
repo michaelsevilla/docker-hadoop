@@ -4,7 +4,15 @@ MAINTAINER Michael Sevilla <mikesevilla3@gmail.com>
 
 RUN echo "===> Install the basics..." && \
     DEBIAN_FRONTEND=noninteractive apt-get update && \
-    apt-get install -yq --force-yes gcc g++ make libprotobuf-dev && \
+    apt-get install -yq --force-yes \
+      gcc \
+      g++ \
+      make \
+      sudo \
+      vim \
+      libprotobuf-dev \
+      openssh-server \
+      openssh-client && \
     apt-get clean && rm -rf \
       /var/lib/apt/lists/* 
 

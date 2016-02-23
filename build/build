@@ -17,5 +17,4 @@ sed -i 's/        <version>6.1.26.hwx<\/version>/        <version>6.1.26<\/versi
 sed -i 's/    <zookeeper.version>3.4.6.2.3.4.0-3485<\/zookeeper.version>/    <zookeeper.version>3.4.6<\/zookeeper.version>/' ./hadoop-project/pom.xml
 
 exec mvn -Pdist -Dtar -Pyarn -DskipTests clean package
-#exec mvn package -Pdist -DskipTests -Dtar
 exit 0
