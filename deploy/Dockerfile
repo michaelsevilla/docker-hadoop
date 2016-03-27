@@ -31,3 +31,7 @@ RUN echo "===> Build jxio..." && \
     cd /JXIO && \
     git clean -fd && \
     ./build.sh
+
+ADD entrypoint.sh /
+RUN chmod 750 /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
