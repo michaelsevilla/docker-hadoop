@@ -25,12 +25,14 @@ RUN yum install -y \
         libevent-devel 
 
 ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.95.x86_64/
-RUN echo "===> Build jxio..." && \
-    cd / && \
-    git clone https://github.com/accelio/JXIO.git && \
-    cd /JXIO && \
-    git clean -fd && \
-    ./build.sh
+
+# Not sure why this failing right now
+#RUN echo "===> Build jxio..." && \
+#    cd / && \
+#    git clone https://github.com/accelio/JXIO.git && \
+#    cd /JXIO && \
+#    git clean -fd && \
+#    ./build.sh
 
 ENV MAVEN_VERSION 3.3.3
 RUN echo "===> Install maven..." && \
