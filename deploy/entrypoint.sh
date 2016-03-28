@@ -15,7 +15,7 @@ fi
 
 # Start the daemon
 cp -r /etc/hadoop/* $HADOOP_CONF_DIR/
-rm -r /tmp/hadoop-root/dfs/*
+rm -r /tmp/hadoop-root/dfs/data
 cd $HADOOP_PREFIX
 if [ "$HADOOP_DAEMON" == "namenode" ] || [ "$HADOOP_DAEMON" == "datanode" ]; then
   bin="bin/hadoop"
